@@ -1,0 +1,7 @@
+<div class="jumbotron">
+  <h1>{{title}}</h1>
+  <p>{{longText}}</p>
+  <p *ngIf="link">
+    <a class="btn btn-lg btn-primary" [routerLinkActive]="['active']" [routerLink]="[link.routerLink]" role="button">{{link.title}} »</a>
+  </p>
+</div>
