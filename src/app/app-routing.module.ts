@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 import { CategoriesComponent } from './categories/categories.component';
 import { HomeComponent } from './home/home.component';
 import { NewCategoryComponent } from './new-category/new-category.component';
@@ -14,8 +14,14 @@ const routes: Routes = [
   { path: 'categories/view/:categoryName', component: ViewCategoryComponent },
 ];
 
+const config: ExtraOptions = {
+  useHash: true,
+  onSameUrlNavigation: 'reload'
+ }; 
+ 
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,config)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
