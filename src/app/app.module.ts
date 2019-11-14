@@ -11,6 +11,8 @@ import { RouterModule } from '@angular/router';
 import { NewCategoryComponent } from './new-category/new-category.component';
 import { ViewCategoryComponent } from './view-category/view-category.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ChartModule } from 'angular2-chartjs';
+import { HttpModule } from '@angular/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     FormsModule,
     ReactiveFormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ChartModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

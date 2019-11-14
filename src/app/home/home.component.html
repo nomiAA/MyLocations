@@ -1,1 +1,9 @@
-<app-nav-header [title] = "title" [link]="link"></app-nav-header>
+<app-nav-header [title]="title"></app-nav-header>
+<div class="form-group required">
+    <label for="itemName" class="control-label">Treshhold value:</label>&nbsp;
+    <input type="text" [(ngModel)]="treshholdVal">&nbsp;
+    <button class="btn btn-primary btn-sm" (click)="addNewBarValue()">Update</button>
+</div>
+<div>
+    <chart #chart [type]="barChartType" [data]="barChartData" [(options)]="barChartOptions"></chart>
+</div>
