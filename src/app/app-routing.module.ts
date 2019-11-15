@@ -7,7 +7,7 @@ import { ViewCategoryComponent } from './view-category/view-category.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: '/categories', pathMatch: 'full' },
+  { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: 'categories', component: CategoriesComponent },
   { path: 'categories/new-category', component: NewCategoryComponent },
   { path: 'home', component: HomeComponent },
